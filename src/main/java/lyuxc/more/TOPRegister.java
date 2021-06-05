@@ -1,6 +1,8 @@
 package lyuxc.more;
 
 import lyuxc.more.plugin.astralsorcery.alter;
+import lyuxc.more.plugin.bloodmagic.BloodAlter;
+import lyuxc.more.plugin.bloodmagic.IncenseAltar;
 import lyuxc.more.plugin.botania.*;
 import lyuxc.more.plugin.botania.botaniaadditions.DreamingPool;
 import lyuxc.more.plugin.botania.botaniaadditions.ElvenAltar;
@@ -87,6 +89,10 @@ public class TOPRegister {
         }
         if(Loader.isModLoaded("astralsorcery")&ConfigHandler.astralsorcery){
             theOneProbeImp.registerProvider(new alter());
+        }
+        if(Loader.isModLoaded("bloodmagic")&ConfigHandler.bloodmagic){
+            theOneProbeImp.registerProvider(new BloodAlter());
+            theOneProbeImp.registerProvider(new IncenseAltar());
         }
     }
 }

@@ -1,26 +1,26 @@
-package lyuxc.more.plugin.exu2;
+package lyuxc.more.plugin.bloodmagic;
 
-import com.rwtema.extrautils2.machine.TileMachine;
+import WayofTime.bloodmagic.tile.TileAltar;
+import WayofTime.bloodmagic.tile.TileIncenseAltar;
 import mcjty.theoneprobe.api.IProbeHitData;
 import mcjty.theoneprobe.api.IProbeInfo;
 import mcjty.theoneprobe.api.IProbeInfoProvider;
 import mcjty.theoneprobe.api.ProbeMode;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 
-public class exu_mac implements IProbeInfoProvider {
+public class IncenseAltar implements IProbeInfoProvider {
     @Override
     public void addProbeInfo(ProbeMode mode, IProbeInfo probeInfo, EntityPlayer player, World world, IBlockState blockState, IProbeHitData data){
-        if(world.getTileEntity(data.getPos())instanceof TileMachine){
-            TileMachine tileMachine = (TileMachine) world.getTileEntity(data.getPos());
-            assert tileMachine != null;
-            probeInfo.text("\u8017\u65F6"+":"+tileMachine.totalTime/20+"s");
+        if(world.getTileEntity(data.getPos())instanceof TileIncenseAltar){
+            TileIncenseAltar tile = (TileIncenseAltar) world.getTileEntity(data.getPos());
+            assert tile != null;
+            probeInfo.text("\u718F\u9999\u52A0\u6210"+":"+tile.incenseAddition);
         }
     }
     @Override
     public String getID() {
-        return "random.exu2.mac";
+        return "random.bloodmagic.incensealtar";
     }
 }
