@@ -1,0 +1,16 @@
+[
+{
+  "modid": "moretopcompatible",
+  "name": "MoreTopCompatible",
+  "description": "More Top Compatible.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["lyuxc"],
+  "credits": "More Top Compatible",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
