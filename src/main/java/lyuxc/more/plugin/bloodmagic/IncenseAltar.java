@@ -1,6 +1,5 @@
 package lyuxc.more.plugin.bloodmagic;
 
-import WayofTime.bloodmagic.tile.TileAltar;
 import WayofTime.bloodmagic.tile.TileIncenseAltar;
 import mcjty.theoneprobe.api.IProbeHitData;
 import mcjty.theoneprobe.api.IProbeInfo;

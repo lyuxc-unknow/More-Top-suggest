@@ -1,7 +1,6 @@
 package lyuxc.more.plugin.chancecubes;
 
 import chanceCubes.tileentities.TileChanceCube;
-import com.sci.torcherino.blocks.tiles.TileTorcherino;
 import mcjty.theoneprobe.api.IProbeHitData;
 import mcjty.theoneprobe.api.IProbeInfo;
 import mcjty.theoneprobe.api.IProbeInfoProvider;

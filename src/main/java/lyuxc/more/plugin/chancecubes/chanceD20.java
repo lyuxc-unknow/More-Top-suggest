@@ -1,6 +1,5 @@
 package lyuxc.more.plugin.chancecubes;
 
-import chanceCubes.tileentities.TileChanceCube;
 import chanceCubes.tileentities.TileChanceD20;
 import mcjty.theoneprobe.api.IProbeHitData;
 import mcjty.theoneprobe.api.IProbeInfo;

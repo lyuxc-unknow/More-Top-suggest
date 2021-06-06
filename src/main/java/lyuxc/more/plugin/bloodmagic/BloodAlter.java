@@ -1,7 +1,6 @@
 package lyuxc.more.plugin.bloodmagic;
 
 import WayofTime.bloodmagic.tile.TileAltar;
-import com.sci.torcherino.blocks.tiles.TileTorcherino;
 import mcjty.theoneprobe.api.IProbeHitData;
 import mcjty.theoneprobe.api.IProbeInfo;
 import mcjty.theoneprobe.api.IProbeInfoProvider;
@@ -17,7 +16,7 @@ public class BloodAlter implements IProbeInfoProvider{
             TileAltar tile = (TileAltar) world.getTileEntity(data.getPos());
             assert tile != null;
             probeInfo.text("\u796D\u575B\u7B49\u7EA7"+":"+tile.getTier().toInt());
-            probeInfo.text("\u8FDB\u5EA6"+":"+tile.getProgress());
+            probeInfo.text("\u5DF2\u6D88\u8017LP"+": "+tile.getProgress()+" LP");
         }
     }
     @Override

@@ -4,7 +4,6 @@ import com.cobbs.lordcraft.Blocks.VoidAltar.TileEntities.VoidAltarTE;
 import mcjty.theoneprobe.api.*;
 import mcjty.theoneprobe.apiimpl.styles.ProgressStyle;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 
