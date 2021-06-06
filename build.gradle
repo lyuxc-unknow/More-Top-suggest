@@ -42,7 +42,7 @@ repositories {
 
 dependencies {
     deobfCompile "mcjty.theoneprobe:TheOneProbe-${top_version}"
-    //deobfCompile "cofh:RedstoneFlux:${redstoneflux_version}"
+    deobfCompile "cofh:RedstoneFlux:${redstoneflux_version}"
     deobfCompile "curse.maven:botania-225643:2846950"
     deobfCompile "curse.maven:embersrekindled-300777:3225431"
     deobfCompile "curse.maven:extrautils2-225561:2678374"

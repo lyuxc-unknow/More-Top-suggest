@@ -24,16 +24,17 @@ import net.minecraftforge.fml.common.Loader;
 
 public class TOPRegister {
     public static void registerTips() {
-        TheOneProbeImp theOneProbeImp = TheOneProbe.theOneProbeImp;//torcherino
+        TheOneProbeImp theOneProbeImp = TheOneProbe.theOneProbeImp;
+        //Torcherino
         if(Loader.isModLoaded("torcherino")& ConfigHandler.torcherino){
             theOneProbeImp.registerProvider(new torcherino());
         }
-        //exu2
+        //Extra utils
         if(Loader.isModLoaded("extrautils2")&ConfigHandler.exu2){
             theOneProbeImp.registerProvider(new exu_enderlilly());
             theOneProbeImp.registerProvider(new exu_mac());
         }
-        //embers
+        //Embers
         if(Loader.isModLoaded("embers")&ConfigHandler.embers){
             theOneProbeImp.registerProvider(new ember_power());
             theOneProbeImp.registerProvider(new ember_auto_hummer());
@@ -56,7 +57,7 @@ public class TOPRegister {
             theOneProbeImp.registerProvider(new ember_mechanical_pump());
             theOneProbeImp.registerProvider(new ember_boiler());
         }
-        //botania
+        //Botania
         if(Loader.isModLoaded("botania")&ConfigHandler.botania){
             theOneProbeImp.registerProvider(new pool());
             theOneProbeImp.registerProvider(new runealtar());
@@ -64,35 +65,41 @@ public class TOPRegister {
             theOneProbeImp.registerProvider(new brewery());
             theOneProbeImp.registerProvider(new terraplate());
         }
-        //botania-additions
+        //Botania Addition
         if(Loader.isModLoaded("botanicadds")&ConfigHandler.botania){
             theOneProbeImp.registerProvider(new DreamingPool());
             theOneProbeImp.registerProvider(new ElvenAltar());
             theOneProbeImp.registerProvider(new GaiaPlate());
         }
-        //lord-craft
+        //Lord Craft
         if(Loader.isModLoaded("lordcraft")&ConfigHandler.lordcraft){
             theOneProbeImp.registerProvider(new void_altar());
         }
-        //omega-craft
+        //Omega Craft
         if(Loader.isModLoaded("omegacraft")&ConfigHandler.omegacraft){
             theOneProbeImp.registerProvider(new dark_maker());
             theOneProbeImp.registerProvider(new mag_mite());
         }
+        //Soot
         if(Loader.isModLoaded("soot")&ConfigHandler.embers){
             theOneProbeImp.registerProvider(new EmberBurst());
             theOneProbeImp.registerProvider(new AlchemyGlobe());
         }
+        //Chance Cubes
         if(Loader.isModLoaded("chancecubes")&ConfigHandler.chancecubes){
             theOneProbeImp.registerProvider(new chancecubes());
             theOneProbeImp.registerProvider(new chanceD20());
         }
+        //Astral Sorcery
         if(Loader.isModLoaded("astralsorcery")&ConfigHandler.astralsorcery){
             theOneProbeImp.registerProvider(new alter());
         }
+        //Blood Magic
         if(Loader.isModLoaded("bloodmagic")&ConfigHandler.bloodmagic){
             theOneProbeImp.registerProvider(new BloodAlter());
-            theOneProbeImp.registerProvider(new IncenseAltar());
+            if(ConfigHandler.bloodmagicmore){
+                theOneProbeImp.registerProvider(new IncenseAltar());
+            }
         }
     }
 }

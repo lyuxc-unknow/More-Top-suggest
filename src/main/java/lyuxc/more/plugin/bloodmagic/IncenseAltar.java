@@ -15,7 +15,8 @@ public class IncenseAltar implements IProbeInfoProvider {
         if(world.getTileEntity(data.getPos())instanceof TileIncenseAltar){
             TileIncenseAltar tile = (TileIncenseAltar) world.getTileEntity(data.getPos());
             assert tile != null;
-            probeInfo.text("\u718F\u9999\u52A0\u6210"+":"+tile.incenseAddition);
+            probeInfo.text("\u589E\u76CA"+": "+(int)(tile.incenseAddition*100)+"%");
+            probeInfo.text("\u5B81\u9759"+": "+(int)(100.0D*(int)(100.0D*tile.tranquility)/100.0D));
         }
     }
     @Override

@@ -12,6 +12,7 @@ public class ConfigHandler {
     public static boolean chancecubes = true;
     public static boolean astralsorcery = true;
     public static boolean bloodmagic = true;
+    public static boolean bloodmagicmore = false;
 
     public static void ReadConfig(){
         Configuration config = MoreTopCompatible.configuration;
@@ -34,5 +35,6 @@ public class ConfigHandler {
         chancecubes = config.getBoolean("Whether to Enable","ChanceCubes",chancecubes,"Enable ChanceCubes Compatible","config.chancecubes");
         astralsorcery = config.getBoolean("Whether to Enable","AstralSorcery",astralsorcery,"Enable AstralSorcery Compatible","config.astralsorcery");
         bloodmagic = config.getBoolean("Whether to Enable","BloodMagic",bloodmagic,"Enable BloodMagic Compatible","config.magic");
+        bloodmagicmore = config.getBoolean("Whether to Enable","BloodMagicMore",bloodmagicmore,"Enable BloodMagicMore Compatible","config.magic.more");
     }
 }
