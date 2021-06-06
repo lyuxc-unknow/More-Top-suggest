@@ -11,18 +11,7 @@ import java.io.File;
         modid = MoreTopCompatible.MOD_ID,
         name = MoreTopCompatible.MOD_NAME,
         version = "0.0.2",
-        dependencies = "after:torcherino;" +
-                "required-after:theoneprobe;" +
-                "after:extrautils2;" +
-                "after:embers;" +
-                "after:botanicadds;" +
-                "after:botania_tweaks;"+
-                "after:omegacraft;"+
-                "after:lordcraft;"+
-                "after:torcherino;"+
-                "after:soot;"+
-                "after:astralsorcery;"+
-                "after:chancecubes;"
+        dependencies = Dependencies.DEPENDENCIES
 )
 public class MoreTopCompatible {
     public static final String MOD_ID = "moretopcompatible";
