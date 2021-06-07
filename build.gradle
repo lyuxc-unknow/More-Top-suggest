@@ -50,6 +50,8 @@ dependencies {
     deobfCompile "curse.maven:omegacraft-261442:2670955"
     deobfCompile "curse.maven:lordcraft-256950:3257224"
     deobfCompile "curse.maven:torcherino-236794:2661356"
+    compile "curse.maven:projecte-226410:2702991"
+    compile "curse.maven:skyresources-243482:2758220"
     compile "curse.maven:bloodmagic-224791:2822288"
     compile "curse.maven:soot-281528:3056967"
     compile "curse.maven:astralsorcery-241721:3044416"

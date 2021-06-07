@@ -1,7 +1,7 @@
 package lyuxc.more;
 
 public class Dependencies {
-    public static final String DEPENDENCIES = "after:torcherino;" +
+    public static final String DEPENDENCIES =
             "required-after:theoneprobe;" +
             "after:extrautils2;" +
             "after:embers;" +

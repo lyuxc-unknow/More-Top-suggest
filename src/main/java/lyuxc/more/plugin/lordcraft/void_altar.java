@@ -18,12 +18,13 @@ public class void_altar implements IProbeInfoProvider {
             probeInfo.text("\u80FD\u91CF" + ":" + voidAltarTE.energy);
             int p = Color.magenta.getRGB();
             int b = Color.blue.getRGB();
+            int w =Color.white.getRGB();
             if (voidAltarTE.procTime > 0) {
                 probeInfo.progress(voidAltarTE.procTime, voidAltarTE.maxProcTime, new ProgressStyle().prefix("\u8FDB\u5EA6" + ":" + voidAltarTE.procTime).suffix("/" + voidAltarTE.maxProcTime)
                         .width(110)
                         .numberFormat(NumberFormat.NONE)
                         .borderColor(b)
-                        .backgroundColor(p)
+                        .backgroundColor(w)
                         .filledColor(p));
             }
         }

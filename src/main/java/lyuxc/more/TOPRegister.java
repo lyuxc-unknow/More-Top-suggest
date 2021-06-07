@@ -17,6 +17,12 @@ import lyuxc.more.plugin.exu2.exu_mac;
 import lyuxc.more.plugin.lordcraft.void_altar;
 import lyuxc.more.plugin.omegacraft.dark_maker;
 import lyuxc.more.plugin.omegacraft.mag_mite;
+import lyuxc.more.plugin.projecte.CollectorMK1;
+import lyuxc.more.plugin.projecte.Condenser;
+import lyuxc.more.plugin.projecte.DMPedestal;
+import lyuxc.more.plugin.projecte.Relay;
+import lyuxc.more.plugin.skyresources.Freezer;
+//import lyuxc.more.plugin.skyresources.LightFreezer;
 import lyuxc.more.plugin.torcherino;
 import mcjty.theoneprobe.TheOneProbe;
 import mcjty.theoneprobe.apiimpl.TheOneProbeImp;
@@ -100,6 +106,17 @@ public class TOPRegister {
             if(ConfigHandler.bloodmagicmore){
                 theOneProbeImp.registerProvider(new IncenseAltar());
             }
+        }
+        //Sky Resources
+        if(Loader.isModLoaded("skyresources")&ConfigHandler.skyresources){
+            theOneProbeImp.registerProvider(new Freezer());
+            //theOneProbeImp.registerProvider(new LightFreezer());
+        }
+        if(Loader.isModLoaded("projecte")&ConfigHandler.projecre){
+            theOneProbeImp.registerProvider(new DMPedestal());
+            theOneProbeImp.registerProvider(new CollectorMK1());
+            theOneProbeImp.registerProvider(new Condenser());
+            theOneProbeImp.registerProvider(new Relay());
         }
     }
 }
