@@ -1,4 +1,4 @@
-package lyuxc.more.plugin;
+package lyuxc.more.plugin.torcherino;
 import com.sci.torcherino.blocks.tiles.TileTorcherino;
 import mcjty.theoneprobe.api.IProbeHitData;
 import mcjty.theoneprobe.api.IProbeInfo;

@@ -23,7 +23,7 @@ import lyuxc.more.plugin.projecte.DMPedestal;
 import lyuxc.more.plugin.projecte.Relay;
 import lyuxc.more.plugin.skyresources.Freezer;
 import lyuxc.more.plugin.skyresources.LightFreezer;
-import lyuxc.more.plugin.torcherino;
+import lyuxc.more.plugin.torcherino.torcherino;
 import mcjty.theoneprobe.TheOneProbe;
 import mcjty.theoneprobe.apiimpl.TheOneProbeImp;
 import net.minecraftforge.fml.common.Loader;

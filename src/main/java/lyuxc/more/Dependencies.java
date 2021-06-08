@@ -13,5 +13,6 @@ public class Dependencies {
             "after:soot;"+
             "after:astralsorcery;"+
             "after:chancecubes;"+
-            "after:bloodmagic";
+            "after:bloodmagic;"+
+            "after:projecte;";
 }
