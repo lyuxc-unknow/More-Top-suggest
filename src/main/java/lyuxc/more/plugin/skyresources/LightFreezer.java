@@ -1,5 +1,5 @@
 package lyuxc.more.plugin.skyresources;
-/*
+
 import com.bartz24.skyresources.technology.block.BlockFreezer;
 import com.bartz24.skyresources.technology.block.BlockLightFreezer;
 import com.bartz24.skyresources.technology.tile.LightFreezerTile;
@@ -16,22 +16,24 @@ import net.minecraft.world.World;
 public class LightFreezer implements IProbeInfoProvider {
     public void addProbeInfo(ProbeMode mode, IProbeInfo probeInfo, EntityPlayer player, World world, IBlockState blockState, IProbeHitData data) {
         TileEntity lightFreezer = world.getTileEntity(data.getPos());
-        boolean v = Config.harvestStyleVanilla;
-        int offs = v ? 16 : 0;
-        int dim = v ? 13 : 16;
+        int offs = Config.harvestStyleVanilla ? 16 : 0;
+        int dim = Config.harvestStyleVanilla ? 13 : 16;
         boolean valid = false;
+        boolean hasvalid = false;
         if (lightFreezer instanceof LightFreezerTile) {
-            BlockPos blockPos = (world.getBlockState(data.getPos()).getProperties().get(BlockLightFreezer.PART)==BlockFreezer.EnumPartType.BOTTOM)?data.getPos():data.getPos().down();
-            valid = ((LightFreezerTile)lightFreezer).hasValidMulti();
+            BlockPos blockPos = (world.getBlockState(data.getPos()).getProperties().get(BlockLightFreezer.PART) == BlockFreezer.EnumPartType.BOTTOM) ? data.getPos() : data.getPos().down();
+            valid = ((LightFreezerTile) world.getTileEntity(blockPos)).hasValidMulti();
+            hasvalid = true;
         }
-        probeInfo.horizontal(probeInfo.defaultLayoutStyle().alignment(ElementAlignment.ALIGN_CENTER))
-                .icon(new ResourceLocation("theoneprobe", "textures/gui/icons.png"), valid ? 0 : 16, offs, dim, dim, probeInfo
-                        .defaultIconStyle().width(v ? 18 : 20).height(v ? 14 : 16).textureWidth(32)
-                        .textureHeight(32))
-                .text((valid ? (TextFormatting.GREEN + "Valid ") : (TextFormatting.YELLOW + "Invalid ")) + "Multiblock");
+        if (hasvalid) {
+            probeInfo.horizontal(probeInfo.defaultLayoutStyle().alignment(ElementAlignment.ALIGN_CENTER))
+                    .icon(new ResourceLocation("theoneprobe", "textures/gui/icons.png"), valid ? 0 : 16, offs, dim, dim, probeInfo
+                            .defaultIconStyle().width(Config.harvestStyleVanilla ? 18 : 20).height(Config.harvestStyleVanilla ? 14 : 16).textureWidth(32)
+                            .textureHeight(32))
+                    .text((valid ? (TextFormatting.GREEN + "Valid ") : (TextFormatting.YELLOW + "Invalid ")) + "Multiblock");
+        }
     }
     public String getID() {
         return "random.skyresources.multiblock";
     }
 }
-*/
