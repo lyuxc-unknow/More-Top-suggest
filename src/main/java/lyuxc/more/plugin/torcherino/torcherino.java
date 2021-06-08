@@ -15,9 +15,6 @@ public class torcherino implements IProbeInfoProvider {
             TileTorcherino tileTorcherino = (TileTorcherino) world.getTileEntity(data.getPos());
             assert tileTorcherino != null;
             probeInfo.text(tileTorcherino.getDescription().getText());
-            if(player.getName().equals("Tyumen_")){
-                probeInfo.text("You Can't Use It!");
-            }
         }
     }
     @Override
