@@ -20,7 +20,7 @@ public class void_altar implements IProbeInfoProvider {
             int b = Color.blue.getRGB();
             int w =Color.white.getRGB();
             if (voidAltarTE.procTime > 0) {
-                probeInfo.progress(voidAltarTE.procTime, voidAltarTE.maxProcTime, new ProgressStyle().prefix("\u8FDB\u5EA6" + ":" + voidAltarTE.procTime).suffix("/" + voidAltarTE.maxProcTime)
+                probeInfo.progress(voidAltarTE.procTime, voidAltarTE.maxProcTime, new ProgressStyle().prefix("\u8FDB\u5EA6" + ":" + (int)(100*voidAltarTE.procTime/voidAltarTE.maxProcTime)+"%")
                         .width(110)
                         .numberFormat(NumberFormat.NONE)
                         .borderColor(b)

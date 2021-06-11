@@ -3,10 +3,10 @@ package lyuxc.more;
 import lyuxc.more.plugin.astralsorcery.alter;
 import lyuxc.more.plugin.bloodmagic.BloodAlter;
 import lyuxc.more.plugin.bloodmagic.IncenseAltar;
-import lyuxc.more.plugin.botania.*;
 import lyuxc.more.plugin.botania.botaniaadditions.DreamingPool;
 import lyuxc.more.plugin.botania.botaniaadditions.ElvenAltar;
 import lyuxc.more.plugin.botania.botaniaadditions.GaiaPlate;
+import lyuxc.more.plugin.botania.*;
 import lyuxc.more.plugin.chancecubes.chanceD20;
 import lyuxc.more.plugin.chancecubes.chancecubes;
 import lyuxc.more.plugin.embers.*;
@@ -112,6 +112,7 @@ public class TOPRegister {
             theOneProbeImp.registerProvider(new Freezer());
             theOneProbeImp.registerProvider(new LightFreezer());
         }
+        //ProjectE
         if(Loader.isModLoaded("projecte")&ConfigHandler.projecre){
             theOneProbeImp.registerProvider(new DMPedestal());
             theOneProbeImp.registerProvider(new CollectorMK1());

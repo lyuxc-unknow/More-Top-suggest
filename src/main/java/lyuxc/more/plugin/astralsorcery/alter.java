@@ -17,14 +17,13 @@ public class alter implements IProbeInfoProvider {
             assert tile != null;
             int black = Color.black.getRGB();
             int white = Color.white.getRGB();
-            int gray = Color.lightGray.getRGB();
             probeInfo.progress(tile.getStarlightStored(), tile.getMaxStarlightStorage(), new ProgressStyle().prefix("\u661F\u80FD"+":"+tile.getStarlightStored()).suffix("/" + tile.getMaxStarlightStorage())
                     .width(100)
                     .numberFormat(NumberFormat.NONE)
                     .borderColor(black)
                     .backgroundColor(white)
-                    .filledColor(gray)
-                    .alternateFilledColor(gray));
+                    .filledColor(0x99B7FFFA)
+                    .alternateFilledColor(0x99B7FFFA));
         }
     }
 
