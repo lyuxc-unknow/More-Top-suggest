@@ -5,6 +5,7 @@ import mcjty.theoneprobe.api.*;
 import mcjty.theoneprobe.apiimpl.styles.ProgressStyle;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
 import java.awt.*;
@@ -17,6 +18,7 @@ public class alter implements IProbeInfoProvider {
             assert tile != null;
             int black = Color.black.getRGB();
             int white = Color.white.getRGB();
+            probeInfo.horizontal();
             probeInfo.progress(tile.getStarlightStored(), tile.getMaxStarlightStorage(), new ProgressStyle().prefix("\u661F\u80FD"+":"+tile.getStarlightStored()).suffix("/" + tile.getMaxStarlightStorage())
                     .width(100)
                     .numberFormat(NumberFormat.NONE)

@@ -17,6 +17,7 @@ import lyuxc.more.plugin.exu2.exu_mac;
 import lyuxc.more.plugin.lordcraft.void_altar;
 import lyuxc.more.plugin.omegacraft.dark_maker;
 import lyuxc.more.plugin.omegacraft.mag_mite;
+import lyuxc.more.plugin.primaltech.*;
 import lyuxc.more.plugin.projecte.CollectorMK1;
 import lyuxc.more.plugin.projecte.Condenser;
 import lyuxc.more.plugin.projecte.DMPedestal;
@@ -118,6 +119,15 @@ public class TOPRegister {
             theOneProbeImp.registerProvider(new CollectorMK1());
             theOneProbeImp.registerProvider(new Condenser());
             theOneProbeImp.registerProvider(new Relay());
+        }
+        //PrimalTech
+        if(Loader.isModLoaded("primal_tech")&ConfigHandler.primaltech){
+            theOneProbeImp.registerProvider(new WaterSaw());
+            theOneProbeImp.registerProvider(new StoneGrill());
+            theOneProbeImp.registerProvider(new Kiln());
+            theOneProbeImp.registerProvider(new WorkStump());
+            theOneProbeImp.registerProvider(new StoneAnvil());
+            theOneProbeImp.registerProvider(new StackBundle());
         }
     }
 }

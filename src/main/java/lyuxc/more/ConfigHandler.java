@@ -11,10 +11,11 @@ public class ConfigHandler {
     public static boolean torcherino = true;
     public static boolean chancecubes = true;
     public static boolean astralsorcery = true;
-    public static boolean bloodmagic = true;
-    public static boolean bloodmagicmore = false;
+    public static boolean bloodmagic = false;
+    public static boolean bloodmagicmore = true;
     public static boolean skyresources = true;
     public static boolean projecre = true;
+    public static boolean primaltech = true;
 
     public static void ReadConfig(){
         Configuration config = MoreTopCompatible.configuration;
@@ -40,5 +41,6 @@ public class ConfigHandler {
         bloodmagicmore = config.getBoolean("Whether to Enable","BloodMagicMore",bloodmagicmore,"Enable BloodMagicMore Compatible","config.magic.more");
         skyresources = config.getBoolean("Whether to Enable","SkyResources",skyresources,"Enable SkyResources Compatible","config.skyresources");
         projecre = config.getBoolean("Whether to Enable","ProjectE",projecre,"Enable ProjectE Compatible","config.projecte");
+        primaltech = config.getBoolean("Whether to Enable","PromalTech",primaltech,"Enable PromalTech Compatible","config.primaltech");
     }
 }
