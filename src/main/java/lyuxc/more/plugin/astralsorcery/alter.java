@@ -5,7 +5,6 @@ import mcjty.theoneprobe.api.*;
 import mcjty.theoneprobe.apiimpl.styles.ProgressStyle;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
 import java.awt.*;

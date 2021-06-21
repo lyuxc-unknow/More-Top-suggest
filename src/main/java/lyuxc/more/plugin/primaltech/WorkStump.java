@@ -7,7 +7,6 @@ import mcjty.theoneprobe.api.ProbeMode;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
-import primal_tech.tiles.TileEntityKiln;
 import primal_tech.tiles.TileEntityWorkStump;
 
 public class WorkStump implements IProbeInfoProvider {

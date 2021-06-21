@@ -1,6 +1,5 @@
 package lyuxc.more.plugin.primaltech;
 
-import com.sci.torcherino.blocks.tiles.TileTorcherino;
 import mcjty.theoneprobe.api.IProbeHitData;
 import mcjty.theoneprobe.api.IProbeInfo;
 import mcjty.theoneprobe.api.IProbeInfoProvider;

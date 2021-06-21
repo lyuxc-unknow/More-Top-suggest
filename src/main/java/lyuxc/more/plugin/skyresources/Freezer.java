@@ -1,8 +1,6 @@
 package lyuxc.more.plugin.skyresources;
 
-import com.bartz24.skyresources.recipe.ProcessRecipe;
 import com.bartz24.skyresources.technology.tile.MiniFreezerTile;
-import com.sci.torcherino.blocks.tiles.TileTorcherino;
 import mcjty.theoneprobe.api.IProbeHitData;
 import mcjty.theoneprobe.api.IProbeInfo;
 import mcjty.theoneprobe.api.IProbeInfoProvider;

@@ -1,6 +1,5 @@
 package lyuxc.more.plugin.primaltech;
 
-import com.rwtema.extrautils2.blocks.BlockEnderLilly;
 import mcjty.theoneprobe.api.IProbeHitData;
 import mcjty.theoneprobe.api.IProbeInfo;
 import mcjty.theoneprobe.api.IProbeInfoProvider;

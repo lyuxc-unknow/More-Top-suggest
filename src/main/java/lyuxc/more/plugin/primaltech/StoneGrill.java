@@ -8,7 +8,6 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import primal_tech.tiles.TileEntityStoneGrill;
-import primal_tech.tiles.TileEntityWaterSaw;
 
 public class StoneGrill implements IProbeInfoProvider {
     @Override

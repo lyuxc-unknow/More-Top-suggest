@@ -22,6 +22,7 @@ import lyuxc.more.plugin.projecte.CollectorMK1;
 import lyuxc.more.plugin.projecte.Condenser;
 import lyuxc.more.plugin.projecte.DMPedestal;
 import lyuxc.more.plugin.projecte.Relay;
+import lyuxc.more.plugin.skyresources.AlchemyFusionTable;
 import lyuxc.more.plugin.skyresources.Freezer;
 import lyuxc.more.plugin.skyresources.LightFreezer;
 import lyuxc.more.plugin.torcherino.torcherino;
@@ -112,6 +113,7 @@ public class TOPRegister {
         if(Loader.isModLoaded("skyresources")&ConfigHandler.skyresources){
             theOneProbeImp.registerProvider(new Freezer());
             theOneProbeImp.registerProvider(new LightFreezer());
+            theOneProbeImp.registerProvider(new AlchemyFusionTable());
         }
         //ProjectE
         if(Loader.isModLoaded("projecte")&ConfigHandler.projecre){

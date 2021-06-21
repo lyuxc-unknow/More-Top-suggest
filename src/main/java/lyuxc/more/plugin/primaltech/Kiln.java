@@ -8,7 +8,6 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import primal_tech.tiles.TileEntityKiln;
-import primal_tech.tiles.TileEntityStoneGrill;
 
 public class Kiln implements IProbeInfoProvider {
     @Override

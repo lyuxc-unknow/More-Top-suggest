@@ -1,7 +1,5 @@
 package lyuxc.more.plugin.projecte;
 
-import com.cobbs.omegacraft.Blocks.Machines.DarkFab.DarkFabTE;
-import com.sci.torcherino.blocks.tiles.TileTorcherino;
 import mcjty.theoneprobe.api.*;
 import mcjty.theoneprobe.apiimpl.styles.ProgressStyle;
 import moze_intel.projecte.gameObjs.tiles.CollectorMK1Tile;
