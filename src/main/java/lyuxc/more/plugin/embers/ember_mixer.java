@@ -4,6 +4,7 @@ import mcjty.theoneprobe.api.*;
 import mcjty.theoneprobe.apiimpl.styles.ProgressStyle;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 import teamroots.embers.tileentity.TileEntityMixerBottom;
 import teamroots.embers.tileentity.TileEntityMixerTop;
@@ -23,7 +24,7 @@ public class ember_mixer implements IProbeInfoProvider {
             int yellow = Color.yellow.getRGB();
             int white = Color.white.getRGB();
             if (tileEntityMixerTop.capability.getEmber() > 0) {
-                probeInfo.progress(ember, max + 5, new ProgressStyle().prefix("\u7070\u70EC\u80FD\u91CF"+ ":" + ember).suffix("/" + max)
+                probeInfo.progress(ember, max + 5, new ProgressStyle().prefix(I18n.translateToLocal("random.Embers.embers")+ ":" + ember).suffix("/" + max)
                         .width(110)
                         .numberFormat(NumberFormat.NONE)
                         .borderColor(yellow)
@@ -37,28 +38,28 @@ public class ember_mixer implements IProbeInfoProvider {
             int cyan = Color.cyan.getRGB();
             int white = Color.white.getRGB();
             if (tileEntityMixerBottom.east.getFluidAmount() > 0) {
-                probeInfo.progress(tileEntityMixerBottom.east.getFluidAmount(), 8000, new ProgressStyle().prefix("\u4E1C\u9762\u6D41\u4F53" + ":"  + Objects.requireNonNull(tileEntityMixerBottom.east.getFluid()).getLocalizedName()).suffix("mb")
+                probeInfo.progress(tileEntityMixerBottom.east.getFluidAmount(), 8000, new ProgressStyle().prefix(I18n.translateToLocal("random.Embers.East") + ":"  + Objects.requireNonNull(tileEntityMixerBottom.east.getFluid()).getLocalizedName()).suffix("mb")
                         .width(130)
                         .backgroundColor(white)
                         .filledColor(cyan)
                         .alternateFilledColor(cyan));
             }
             if (tileEntityMixerBottom.south.getFluidAmount() > 0) {
-                probeInfo.progress(tileEntityMixerBottom.south.getFluidAmount(), 8000, new ProgressStyle().prefix("\u5357\u9762\u6D41\u4F53" + ":"  + Objects.requireNonNull(tileEntityMixerBottom.south.getFluid()).getLocalizedName()).suffix("mb")
+                probeInfo.progress(tileEntityMixerBottom.south.getFluidAmount(), 8000, new ProgressStyle().prefix(I18n.translateToLocal("random.Embers.South") + ":"  + Objects.requireNonNull(tileEntityMixerBottom.south.getFluid()).getLocalizedName()).suffix("mb")
                         .width(130)
                         .backgroundColor(white)
                         .filledColor(cyan)
                         .alternateFilledColor(cyan));
             }
             if (tileEntityMixerBottom.west.getFluidAmount() > 0) {
-                probeInfo.progress(tileEntityMixerBottom.west.getFluidAmount(), 8000, new ProgressStyle().prefix("\u897F\u9762\u6D41\u4F53" + ":"  + Objects.requireNonNull(tileEntityMixerBottom.west.getFluid()).getLocalizedName()).suffix("mb")
+                probeInfo.progress(tileEntityMixerBottom.west.getFluidAmount(), 8000, new ProgressStyle().prefix(I18n.translateToLocal("random.Embers.West") + ":"  + Objects.requireNonNull(tileEntityMixerBottom.west.getFluid()).getLocalizedName()).suffix("mb")
                         .width(130)
                         .backgroundColor(white)
                         .filledColor(cyan)
                         .alternateFilledColor(cyan));
             }
             if (tileEntityMixerBottom.north.getFluidAmount() > 0) {
-                probeInfo.progress(tileEntityMixerBottom.north.getFluidAmount(), 8000, new ProgressStyle().prefix("\u5317\u9762\u6D41\u4F53" + ":"  + Objects.requireNonNull(tileEntityMixerBottom.north.getFluid()).getLocalizedName()).suffix("mb")
+                probeInfo.progress(tileEntityMixerBottom.north.getFluidAmount(), 8000, new ProgressStyle().prefix(I18n.translateToLocal("random.Embers.North") + ":"  + Objects.requireNonNull(tileEntityMixerBottom.north.getFluid()).getLocalizedName()).suffix("mb")
                         .width(130)
                         .backgroundColor(white)
                         .filledColor(cyan)

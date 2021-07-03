@@ -7,6 +7,7 @@ import mcjty.theoneprobe.api.IProbeInfoProvider;
 import mcjty.theoneprobe.api.ProbeMode;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 
 public class chanceD20 implements IProbeInfoProvider {
@@ -15,7 +16,7 @@ public class chanceD20 implements IProbeInfoProvider {
         if(world.getTileEntity(data.getPos())instanceof TileChanceD20){
             TileChanceD20 tile = (TileChanceD20) world.getTileEntity(data.getPos());
             assert tile != null;
-            probeInfo.text("\u673A\u4F1A\u503C"+ ":" +tile.getChance());
+            probeInfo.text(I18n.translateToLocal("random.ChanceCubes.Chance") + ":" +tile.getChance());
 
         }
     }

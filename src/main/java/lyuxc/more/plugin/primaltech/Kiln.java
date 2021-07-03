@@ -6,6 +6,7 @@ import mcjty.theoneprobe.api.IProbeInfoProvider;
 import mcjty.theoneprobe.api.ProbeMode;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 import primal_tech.tiles.TileEntityKiln;
 
@@ -16,7 +17,7 @@ public class Kiln implements IProbeInfoProvider {
             TileEntityKiln tile = (TileEntityKiln) world.getTileEntity(data.getPos());
             assert tile != null;
             if(tile.getTemp()>0){
-                probeInfo.text("\u70ED\u91CF"+":"+tile.getTemp()/2+"%");
+                probeInfo.text(I18n.translateToLocal("random.PrimalTech.Kiln") +":"+tile.getTemp()/2+"%");
             }
         }
     }

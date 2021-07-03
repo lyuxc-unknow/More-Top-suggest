@@ -7,6 +7,7 @@ import mcjty.theoneprobe.api.IProbeInfoProvider;
 import mcjty.theoneprobe.api.ProbeMode;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 
 public class exu_mac implements IProbeInfoProvider {
@@ -15,7 +16,7 @@ public class exu_mac implements IProbeInfoProvider {
         if(world.getTileEntity(data.getPos())instanceof TileMachine){
             TileMachine tileMachine = (TileMachine) world.getTileEntity(data.getPos());
             assert tileMachine != null;
-            probeInfo.text("\u8017\u65F6"+":"+tileMachine.totalTime/20+"s");
+            probeInfo.text(I18n.translateToLocal("random.ExU2.TotalTime") +":"+tileMachine.totalTime/20+"s");
         }
     }
     @Override

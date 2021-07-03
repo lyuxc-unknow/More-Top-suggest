@@ -5,6 +5,7 @@ import mcjty.theoneprobe.apiimpl.styles.ProgressStyle;
 import moze_intel.projecte.gameObjs.tiles.RelayMK1Tile;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 
 import java.awt.*;
@@ -19,7 +20,7 @@ public class Relay implements IProbeInfoProvider {
         int w = Color.white.getRGB();
         assert tile != null;
         if (tile.getStoredEmc() > 0) {
-            probeInfo.progress(tile.getStoredEmc(), tile.getMaximumEmc(), new ProgressStyle().prefix("\u5DF2\u50A8\u5B58EMC" + ":" + tile.getStoredEmc()).suffix("/" + tile.getMaximumEmc())
+            probeInfo.progress(tile.getStoredEmc(), tile.getMaximumEmc(), new ProgressStyle().prefix(I18n.translateToLocal("random.ProjectE.EMC") + ":" + tile.getStoredEmc()).suffix("/" + tile.getMaximumEmc())
                     .width(110)
                     .numberFormat(NumberFormat.NONE)
                     .borderColor(b)

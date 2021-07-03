@@ -5,6 +5,7 @@ import mcjty.theoneprobe.api.*;
 import mcjty.theoneprobe.apiimpl.styles.ProgressStyle;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 
 import java.awt.*;
@@ -18,7 +19,7 @@ public class alter implements IProbeInfoProvider {
             int black = Color.black.getRGB();
             int white = Color.white.getRGB();
             probeInfo.horizontal();
-            probeInfo.progress(tile.getStarlightStored(), tile.getMaxStarlightStorage(), new ProgressStyle().prefix("\u661F\u80FD"+":"+tile.getStarlightStored()).suffix("/" + tile.getMaxStarlightStorage())
+            probeInfo.progress(tile.getStarlightStored(), tile.getMaxStarlightStorage(), new ProgressStyle().prefix(I18n.translateToLocal("random.AstralSorcery.Alter") +":"+tile.getStarlightStored()).suffix("/" + tile.getMaxStarlightStorage())
                     .width(100)
                     .numberFormat(NumberFormat.NONE)
                     .borderColor(black)

@@ -4,6 +4,7 @@ import mcjty.theoneprobe.api.*;
 import mcjty.theoneprobe.apiimpl.styles.ProgressStyle;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 import teamroots.embers.tileentity.TileEntityAlchemyPedestal;
 
@@ -16,14 +17,14 @@ public class ember_alchemy_pedestal implements IProbeInfoProvider {
             TileEntityAlchemyPedestal tileEntityAlchemyPedestal = (TileEntityAlchemyPedestal) world.getTileEntity(data.getPos());
             assert tileEntityAlchemyPedestal != null;
             if (!tileEntityAlchemyPedestal.inventory.getStackInSlot(1).isEmpty()) {
-                probeInfo.text("\u8C61\u5F81" + ":" + tileEntityAlchemyPedestal.inventory.getStackInSlot(1).getDisplayName());
+                probeInfo.text(I18n.translateToLocal("random.Embers.Aspects") + ":" + tileEntityAlchemyPedestal.inventory.getStackInSlot(1).getDisplayName());
             }
             int blackRGB = Color.black.getRGB();
             int darkGrayRGB = Color.darkGray.getRGB();
             int gary = SystemColor.GRAY.getRGB();
             int white = Color.white.getRGB();
             if (!tileEntityAlchemyPedestal.inventory.getStackInSlot(0).isEmpty()) {
-                probeInfo.progress(tileEntityAlchemyPedestal.inventory.getStackInSlot(0).getCount() - 1, 64, new ProgressStyle().prefix("\u7070\u70EC" + ":" + tileEntityAlchemyPedestal.inventory.getStackInSlot(0).getCount()).suffix("/" + "64")
+                probeInfo.progress(tileEntityAlchemyPedestal.inventory.getStackInSlot(0).getCount() - 1, 64, new ProgressStyle().prefix(I18n.translateToLocal("random.Embers.Ash") + ":" + tileEntityAlchemyPedestal.inventory.getStackInSlot(0).getCount()).suffix("/" + "64")
                         .width(101)
                         .numberFormat(NumberFormat.NONE)
                         .borderColor(gary)

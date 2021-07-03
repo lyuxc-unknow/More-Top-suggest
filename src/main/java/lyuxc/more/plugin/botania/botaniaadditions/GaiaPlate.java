@@ -4,6 +4,7 @@ import mcjty.theoneprobe.api.*;
 import mcjty.theoneprobe.apiimpl.styles.ProgressStyle;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 import tk.zeitheron.botanicadds.blocks.tiles.TileGaiaPlate;
 
@@ -19,7 +20,7 @@ public class GaiaPlate implements IProbeInfoProvider {
             int green = Color.green.getRGB();
             int white = Color.white.getRGB();
             if (tile.getCurrentMana() > 0) {
-                probeInfo.progress(tile.getCurrentMana(), tile.getAvailableSpaceForMana() + tile.getCurrentMana(), new ProgressStyle().prefix("\u8FD8\u9700\u9B54\u529B" + ":" + tile.getAvailableSpaceForMana())
+                probeInfo.progress(tile.getCurrentMana(), tile.getAvailableSpaceForMana() + tile.getCurrentMana(), new ProgressStyle().prefix(I18n.translateToLocal("random.Botania.GaiaPlate.StillNeedMana") + ":" + tile.getAvailableSpaceForMana())
                         .width(110)
                         .numberFormat(NumberFormat.NONE)
                         .borderColor(green)

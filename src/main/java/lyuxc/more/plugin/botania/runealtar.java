@@ -4,6 +4,7 @@ import mcjty.theoneprobe.api.*;
 import mcjty.theoneprobe.apiimpl.styles.ProgressStyle;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 import vazkii.botania.common.block.tile.TileRuneAltar;
 
@@ -19,7 +20,7 @@ public class runealtar implements IProbeInfoProvider {
             int green = Color.green.getRGB();
             int white = Color.white.getRGB();
             if (tile.hasValidRecipe()) {
-                probeInfo.progress(tile.getCurrentMana(), tile.getTargetMana(), new ProgressStyle().prefix("\u9B54\u529B" + ":" + tile.getCurrentMana()).suffix("/" + tile.getTargetMana())
+                probeInfo.progress(tile.getCurrentMana(), tile.getTargetMana(), new ProgressStyle().prefix(I18n.translateToLocal("random.Botania.Mana") + ":" + tile.getCurrentMana()).suffix("/" + tile.getTargetMana())
                         .width(110)
                         .numberFormat(NumberFormat.NONE)
                         .borderColor(green)

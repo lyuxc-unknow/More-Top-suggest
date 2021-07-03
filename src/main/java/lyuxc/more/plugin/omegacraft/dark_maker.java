@@ -5,6 +5,7 @@ import mcjty.theoneprobe.api.*;
 import mcjty.theoneprobe.apiimpl.styles.ProgressStyle;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 
 import java.awt.*;
@@ -18,7 +19,7 @@ public class dark_maker implements IProbeInfoProvider {
             int p = Color.magenta.getRGB();
             int b = Color.blue.getRGB();
             if (te.procTimes.get(0) > 0) {
-                probeInfo.progress(te.procTimes.get(0), te.maxProcTime, new ProgressStyle().prefix("\u8FDB\u5EA6" + ":" + te.procTimes.get(0)).suffix("/" + te.maxProcTime)
+                probeInfo.progress(te.procTimes.get(0), te.maxProcTime, new ProgressStyle().prefix(I18n.translateToLocal("random.OmegaCraft.DarkMaker.TotalTime") + ":" + te.procTimes.get(0)).suffix("/" + te.maxProcTime)
                         .width(100)
                         .numberFormat(NumberFormat.NONE)
                         .borderColor(b)

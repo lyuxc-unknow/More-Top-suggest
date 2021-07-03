@@ -6,6 +6,7 @@ import mcjty.theoneprobe.api.IProbeInfoProvider;
 import mcjty.theoneprobe.api.ProbeMode;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 import primal_tech.tiles.TileEntityStoneAnvil;
 
@@ -15,8 +16,8 @@ public class StoneAnvil implements IProbeInfoProvider {
         if(world.getTileEntity(data.getPos())instanceof TileEntityStoneAnvil){
             TileEntityStoneAnvil tile = (TileEntityStoneAnvil) world.getTileEntity(data.getPos());
             assert tile != null;
-            probeInfo.text("\u5DF2\u4F7F\u7528"+":"+tile.damage);
-            probeInfo.text("\u5DF2\u6572\u51FB"+":"+tile.strikes);
+            probeInfo.text(I18n.translateToLocal("random.PrimalTech.Used") +":"+tile.damage);
+            probeInfo.text(I18n.translateToLocal("random.PrimalTech.Strikes")+":"+tile.strikes);
         }
     }
     @Override

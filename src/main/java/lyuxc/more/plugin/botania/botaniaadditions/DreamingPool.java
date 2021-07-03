@@ -4,6 +4,7 @@ import mcjty.theoneprobe.api.*;
 import mcjty.theoneprobe.apiimpl.styles.ProgressStyle;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 import tk.zeitheron.botanicadds.blocks.tiles.TileDreamingPool;
 
@@ -19,7 +20,7 @@ public class DreamingPool implements IProbeInfoProvider {
             int green = Color.green.getRGB();
             int white = Color.white.getRGB();
             if (tile.getCurrentMana() > 0) {
-                probeInfo.progress(tile.getCurrentMana(), 2000000, new ProgressStyle().prefix("\u9B54\u529B" + ":" + tile.getCurrentMana()).suffix("/" + 2000000)
+                probeInfo.progress(tile.getCurrentMana(), 2000000, new ProgressStyle().prefix(I18n.translateToLocal("random.Botania.Mana") + ":" + tile.getCurrentMana()).suffix("/" + 2000000)
                         .width(110)
                         .numberFormat(NumberFormat.NONE)
                         .borderColor(green)

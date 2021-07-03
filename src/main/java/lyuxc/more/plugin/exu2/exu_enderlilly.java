@@ -7,6 +7,7 @@ import mcjty.theoneprobe.api.IProbeInfoProvider;
 import mcjty.theoneprobe.api.ProbeMode;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 
 public class exu_enderlilly implements IProbeInfoProvider {
@@ -15,7 +16,7 @@ public class exu_enderlilly implements IProbeInfoProvider {
         if (blockState.getBlock() instanceof BlockEnderLilly) {
             int growth = blockState.getValue(BlockEnderLilly.GROWTH_STATE);
             if (growth == 7) {
-                probeInfo.text("\u00A7aFully grown");
+                probeInfo.text("\u00A7a"+ I18n.translateToFallback("random.ExU2.FullyGrown"));
             } else {
                 probeInfo.text("\u00A77Growth:\u00A7r" + growth);
             }

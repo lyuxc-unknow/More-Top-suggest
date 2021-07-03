@@ -6,6 +6,7 @@ import mcjty.theoneprobe.api.IProbeInfoProvider;
 import mcjty.theoneprobe.api.ProbeMode;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 import soot.tile.TileEntityAlchemyGlobe;
 
@@ -15,7 +16,7 @@ public class AlchemyGlobe implements IProbeInfoProvider {
         if(world.getTileEntity(data.getPos())instanceof TileEntityAlchemyGlobe){
             TileEntityAlchemyGlobe tile = (TileEntityAlchemyGlobe) world.getTileEntity(data.getPos());
             assert tile != null;
-            probeInfo.text("\u8C61\u5F81" + ":" + tile.getAspects().getAspects());
+            probeInfo.text(I18n.translateToLocal("random.Embers.Aspects") + ":" + tile.getAspects().getAspects());
         }
     }
     @Override

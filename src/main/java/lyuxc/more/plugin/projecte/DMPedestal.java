@@ -7,6 +7,7 @@ import mcjty.theoneprobe.api.ProbeMode;
 import moze_intel.projecte.gameObjs.tiles.DMPedestalTile;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 
 public class DMPedestal implements IProbeInfoProvider {
@@ -16,9 +17,9 @@ public class DMPedestal implements IProbeInfoProvider {
             DMPedestalTile tile = (DMPedestalTile) world.getTileEntity(data.getPos());
             assert tile != null;
             if(tile.getActive()){
-                probeInfo.text("\u6FC0\u6D3B\u72B6\u6001"+":"+"\u5DF2\u6FC0\u6D3B");
+                probeInfo.text(I18n.translateToLocal("random.ProjectE.ActiveState") +":"+I18n.translateToLocal("random.ProjectE.Activated"));
             }else{
-                probeInfo.text("\u6FC0\u6D3B\u72B6\u6001"+":"+"\u672A\u6FC0\u6D3B");
+                probeInfo.text(I18n.translateToLocal("random.ProjectE.ActiveState")+":"+I18n.translateToLocal("random.ProjectE.Inactivated"));
             }
         }
     }

@@ -6,6 +6,7 @@ import mcjty.theoneprobe.api.IProbeInfoProvider;
 import mcjty.theoneprobe.api.ProbeMode;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 import primal_tech.blocks.BlockStickBundle;
 
@@ -15,7 +16,7 @@ public class StackBundle implements IProbeInfoProvider {
         if (blockState.getBlock() instanceof BlockStickBundle) {
             int stage = blockState.getValue(BlockStickBundle.IGNITION_STAGE);
             if (stage>0) {
-                probeInfo.text("\u70B9\u71C3\u72B6\u6001"+":"+stage);
+                probeInfo.text(I18n.translateToLocal("random.PrimalTech.StackBundle") +":"+stage);
             }
         }
     }

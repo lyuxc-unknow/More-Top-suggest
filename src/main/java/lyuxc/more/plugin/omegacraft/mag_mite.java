@@ -5,6 +5,7 @@ import mcjty.theoneprobe.api.*;
 import mcjty.theoneprobe.apiimpl.styles.ProgressStyle;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 
 import java.awt.*;
@@ -21,7 +22,7 @@ public class mag_mite implements IProbeInfoProvider {
             int black = Color.black.getRGB();
             int p = Color.magenta.getRGB();
             if (te.heat > 0) {
-                probeInfo.progress(te.heat, te.maxHeat, new ProgressStyle().prefix("\u70ED\u91CF" + ":" + te.heat).suffix("/" + te.maxHeat)
+                probeInfo.progress(te.heat, te.maxHeat, new ProgressStyle().prefix(I18n.translateToLocal("random.OmegaCraft.Mag.Heat") + ":" + te.heat).suffix("/" + te.maxHeat)
                         .width(100)
                         .numberFormat(NumberFormat.NONE)
                         .borderColor(r)
@@ -30,7 +31,7 @@ public class mag_mite implements IProbeInfoProvider {
                         .alternateFilledColor(o));
             }
             if(te.cave_fuel&te.fuelLevel>0){
-                probeInfo.progress(te.fuelLevel, te.maxFuel, new ProgressStyle().prefix("\u71C3\u6599" + ":" + te.fuelLevel).suffix("/" + te.maxFuel)
+                probeInfo.progress(te.fuelLevel, te.maxFuel, new ProgressStyle().prefix(I18n.translateToLocal("random.OmegaCraft.Mag.Fuel") + ":" + te.fuelLevel).suffix("/" + te.maxFuel)
                         .width(100)
                         .numberFormat(NumberFormat.NONE)
                         .borderColor(black)
@@ -38,7 +39,7 @@ public class mag_mite implements IProbeInfoProvider {
                         .filledColor(p)
                         .alternateFilledColor(p));
             }else if(!te.cave_fuel&te.fuelLevel>0){
-                probeInfo.progress(te.fuelLevel, te.maxFuel, new ProgressStyle().prefix("\u71C3\u6599" + ":" + te.fuelLevel).suffix("/" + te.maxFuel)
+                probeInfo.progress(te.fuelLevel, te.maxFuel, new ProgressStyle().prefix(I18n.translateToLocal("random.OmegaCraft.Mag.Fuel") + ":" + te.fuelLevel).suffix("/" + te.maxFuel)
                         .width(100)
                         .numberFormat(NumberFormat.NONE)
                         .borderColor(black)

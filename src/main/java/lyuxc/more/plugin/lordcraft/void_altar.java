@@ -5,6 +5,7 @@ import mcjty.theoneprobe.api.*;
 import mcjty.theoneprobe.apiimpl.styles.ProgressStyle;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 
 import java.awt.*;
@@ -20,7 +21,7 @@ public class void_altar implements IProbeInfoProvider {
             int b = Color.blue.getRGB();
             int w =Color.white.getRGB();
             if (voidAltarTE.procTime > 0) {
-                probeInfo.progress(voidAltarTE.procTime, voidAltarTE.maxProcTime, new ProgressStyle().prefix("\u8FDB\u5EA6" + ":" + (int)(100*voidAltarTE.procTime/voidAltarTE.maxProcTime)+"%")
+                probeInfo.progress(voidAltarTE.procTime, voidAltarTE.maxProcTime, new ProgressStyle().prefix(I18n.translateToLocal("random.LordCraft.VoidAltar.TotalTime") + ":" + (int)(100*voidAltarTE.procTime/voidAltarTE.maxProcTime)+"%")
                         .width(110)
                         .numberFormat(NumberFormat.NONE)
                         .borderColor(b)
