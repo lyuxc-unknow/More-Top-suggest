@@ -18,10 +18,7 @@ import lyuxc.more.plugin.lordcraft.void_altar;
 import lyuxc.more.plugin.omegacraft.dark_maker;
 import lyuxc.more.plugin.omegacraft.mag_mite;
 import lyuxc.more.plugin.primaltech.*;
-import lyuxc.more.plugin.projecte.CollectorMK1;
-import lyuxc.more.plugin.projecte.Condenser;
-import lyuxc.more.plugin.projecte.DMPedestal;
-import lyuxc.more.plugin.projecte.Relay;
+import lyuxc.more.plugin.projecte.*;
 import lyuxc.more.plugin.skyresources.AlchemyFusionTable;
 import lyuxc.more.plugin.skyresources.Freezer;
 import lyuxc.more.plugin.skyresources.LightFreezer;
@@ -121,6 +118,9 @@ public class TOPRegister {
             theOneProbeImp.registerProvider(new CollectorMK1());
             theOneProbeImp.registerProvider(new Condenser());
             theOneProbeImp.registerProvider(new Relay());
+        }
+        if(Loader.isModLoaded("projecte")&ConfigHandler.peprobe){
+            theOneProbeImp.registerProvider(new ProjectEProbeInfo());
         }
         //PrimalTech
         if(Loader.isModLoaded("primal_tech")&ConfigHandler.primaltech){

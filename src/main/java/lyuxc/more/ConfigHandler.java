@@ -15,6 +15,7 @@ public class ConfigHandler {
     public static boolean bloodmagicmore = true;
     public static boolean skyresources = true;
     public static boolean projecre = true;
+    public static boolean peprobe = true;
     public static boolean primaltech = true;
 
     public static void ReadConfig(){
@@ -42,5 +43,6 @@ public class ConfigHandler {
         skyresources = config.getBoolean("Whether to Enable","SkyResources",skyresources,"Enable SkyResources Compatible","config.skyresources");
         projecre = config.getBoolean("Whether to Enable","ProjectE",projecre,"Enable ProjectE Compatible","config.projecte");
         primaltech = config.getBoolean("Whether to Enable","PromalTech",primaltech,"Enable PromalTech Compatible","config.primaltech");
+        peprobe = config.getBoolean("Whether to Enable","ProjectEProbeInfo",peprobe,"Enable ProjectE ProbeInfo Compatible","config.peprobe");
     }
 }
