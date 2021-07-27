@@ -16,7 +16,7 @@ public class void_altar implements IProbeInfoProvider {
         if (world.getTileEntity(data.getPos()) instanceof VoidAltarTE) {
             VoidAltarTE voidAltarTE = (VoidAltarTE) world.getTileEntity(data.getPos());
             assert voidAltarTE != null;
-            probeInfo.text("\u80FD\u91CF" + ":" + voidAltarTE.energy);
+            probeInfo.text(I18n.translateToLocal("random.LordCraft.VoidAlter.Power") + ":" + voidAltarTE.energy);
             int p = Color.magenta.getRGB();
             int b = Color.blue.getRGB();
             int w =Color.white.getRGB();

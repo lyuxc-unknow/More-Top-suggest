@@ -16,7 +16,7 @@ public class exu_enderlilly implements IProbeInfoProvider {
         if (blockState.getBlock() instanceof BlockEnderLilly) {
             int growth = blockState.getValue(BlockEnderLilly.GROWTH_STATE);
             if (growth == 7) {
-                probeInfo.text("\u00A7a"+ I18n.translateToFallback("random.ExU2.FullyGrown"));
+                probeInfo.text("\u00A7a"+ I18n.translateToLocal("random.ExU2.FullyGrown"));
             } else {
                 probeInfo.text("\u00A77Growth:\u00A7r" + growth);
             }

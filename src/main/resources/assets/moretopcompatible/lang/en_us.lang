@@ -15,6 +15,7 @@ random.Embers.North=North
 random.ExU2.FullyGrown=FullyGrown
 random.ExU2.TotalTime=TotalTime
 random.LordCraft.VoidAltar.TotalTime=TotalTime
+random.LordCraft.VoidAlter.Power=Energy
 random.OmegaCraft.DarkMaker.TotalTime=TotalTime
 random.OmegaCraft.Mag.Heat=Heat
 random.OmegaCraft.Mag.Fuel=Fuel
