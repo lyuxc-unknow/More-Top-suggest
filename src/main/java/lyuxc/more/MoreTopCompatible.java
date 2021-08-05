@@ -10,7 +10,7 @@ import java.io.File;
 @Mod(
         modid = MoreTopCompatible.MOD_ID,
         name = MoreTopCompatible.MOD_NAME,
-        version = "0.0.8",
+        version = "0.0.9",
         dependencies = "required-after:theoneprobe"
 )
 public class MoreTopCompatible {

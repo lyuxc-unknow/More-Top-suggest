@@ -15,6 +15,7 @@ import lyuxc.more.plugin.embers.soot.EmberBurst;
 import lyuxc.more.plugin.extendedcrafting.ExtendedCraftingProbeInfo;
 import lyuxc.more.plugin.exu2.exu_enderlilly;
 import lyuxc.more.plugin.exu2.exu_mac;
+import lyuxc.more.plugin.lordcraft.EnergyProbe;
 import lyuxc.more.plugin.lordcraft.void_altar;
 import lyuxc.more.plugin.omegacraft.dark_maker;
 import lyuxc.more.plugin.omegacraft.mag_mite;
@@ -77,8 +78,10 @@ public class TOPRegister {
             theOneProbeImp.registerProvider(new GaiaPlate());
         }
         //Lord Craft
-        if(Loader.isModLoaded("lordcraft")&ConfigHandler.lordcraft)
+        if(Loader.isModLoaded("lordcraft")&ConfigHandler.lordcraft) {
             theOneProbeImp.registerProvider(new void_altar());
+            theOneProbeImp.registerProvider(new EnergyProbe());
+        }
         //Omega Craft
         if(Loader.isModLoaded("omegacraft")&ConfigHandler.omegacraft){
             theOneProbeImp.registerProvider(new dark_maker());

@@ -16,7 +16,7 @@ public class ProjectEProbeInfo implements IProbeInfoProvider {
     public void addProbeInfo(ProbeMode mode, IProbeInfo probeInfo, EntityPlayer player, World world, IBlockState blockState, IProbeHitData data){
         long value = EMCHelper.getEmcValue(new ItemStack(blockState.getBlock()));
         if(value>0){
-            probeInfo.text(TextFormatting.YELLOW +"EMC"+TextFormatting.RESET+":"+value);
+            probeInfo.text(TextFormatting.YELLOW +"EMC"+":"+TextFormatting.RESET+value);
         }
     }
     @Override
