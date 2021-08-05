@@ -1,19 +1,16 @@
 package lyuxc.more;
 
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import java.io.File;
-import java.util.HashMap;
 
 @Mod(
         modid = MoreTopCompatible.MOD_ID,
         name = MoreTopCompatible.MOD_NAME,
-        version = "0.0.7",
+        version = "0.0.8",
         dependencies = "required-after:theoneprobe"
 )
 public class MoreTopCompatible {
