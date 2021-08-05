@@ -17,6 +17,7 @@ public class ConfigHandler {
     public static boolean projecre = true;
     public static boolean peprobe = true;
     public static boolean primaltech = true;
+    public static boolean extendedcrafting = true;
 
     public static void ReadConfig(){
         Configuration config = MoreTopCompatible.configuration;
@@ -44,5 +45,6 @@ public class ConfigHandler {
         projecre = config.getBoolean("Whether to Enable","ProjectE",projecre,"Enable ProjectE Compatible","config.projecte");
         primaltech = config.getBoolean("Whether to Enable","PromalTech",primaltech,"Enable PromalTech Compatible","config.primaltech");
         peprobe = config.getBoolean("Whether to Enable","ProjectEProbeInfo",peprobe,"Enable ProjectE ProbeInfo Compatible","config.peprobe");
+        extendedcrafting = config.getBoolean("Whether to Enable","ExtendedCrafting",extendedcrafting,"Enable ExtendedCrafting Compatible","config.extendedcrafting");
     }
 }

@@ -44,6 +44,7 @@ repositories {
 dependencies {
     deobfCompile "mcjty.theoneprobe:TheOneProbe-${top_version}"
     deobfCompile "cofh:RedstoneFlux:${redstoneflux_version}"
+    deobfCompile "mezz.jei:jei_${mc_version}:${jei_version}"
 
     deobfCompile "curse.maven:botania-225643:3330934"
     deobfCompile "curse.maven:embersrekindled-300777:3225431"
@@ -59,7 +60,8 @@ dependencies {
     deobfCompile "curse.maven:astralsorcery-241721:3044416"
     deobfCompile "curse.maven:chancecubes-233113:3087611"
     deobfCompile "curse.maven:primaltech-290612:2801696"
-    deobfCompile "mezz.jei:jei_${mc_version}:${jei_version}"
+    compile "curse.maven:extendedcrafting-268387:2777071"
+    compile "curse.maven:cucumberlib-272335:2645867"
 
     runtime "curse.maven:topaddons-247111:2887479"
     runtime "curse.maven:hammercore-247401:3157564"

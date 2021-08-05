@@ -12,6 +12,7 @@ import lyuxc.more.plugin.chancecubes.chancecubes;
 import lyuxc.more.plugin.embers.*;
 import lyuxc.more.plugin.embers.soot.AlchemyGlobe;
 import lyuxc.more.plugin.embers.soot.EmberBurst;
+import lyuxc.more.plugin.extendedcrafting.ExtendedCraftingProbeInfo;
 import lyuxc.more.plugin.exu2.exu_enderlilly;
 import lyuxc.more.plugin.exu2.exu_mac;
 import lyuxc.more.plugin.lordcraft.void_altar;
@@ -31,9 +32,8 @@ public class TOPRegister {
     public static void registerTips() {
         TheOneProbeImp theOneProbeImp = TheOneProbe.theOneProbeImp;
         //Torcherino
-        if(Loader.isModLoaded("torcherino")& ConfigHandler.torcherino){
+        if(Loader.isModLoaded("torcherino")& ConfigHandler.torcherino)
             theOneProbeImp.registerProvider(new torcherino());
-        }
         //Extra utils
         if(Loader.isModLoaded("extrautils2")&ConfigHandler.exu2){
             theOneProbeImp.registerProvider(new exu_enderlilly());
@@ -77,9 +77,8 @@ public class TOPRegister {
             theOneProbeImp.registerProvider(new GaiaPlate());
         }
         //Lord Craft
-        if(Loader.isModLoaded("lordcraft")&ConfigHandler.lordcraft){
+        if(Loader.isModLoaded("lordcraft")&ConfigHandler.lordcraft)
             theOneProbeImp.registerProvider(new void_altar());
-        }
         //Omega Craft
         if(Loader.isModLoaded("omegacraft")&ConfigHandler.omegacraft){
             theOneProbeImp.registerProvider(new dark_maker());
@@ -96,9 +95,8 @@ public class TOPRegister {
             theOneProbeImp.registerProvider(new chanceD20());
         }
         //Astral Sorcery
-        if(Loader.isModLoaded("astralsorcery")&ConfigHandler.astralsorcery){
+        if(Loader.isModLoaded("astralsorcery")&ConfigHandler.astralsorcery)
             theOneProbeImp.registerProvider(new alter());
-        }
         //Blood Magic
         if(Loader.isModLoaded("bloodmagic")&ConfigHandler.bloodmagic){
             theOneProbeImp.registerProvider(new BloodAlter());
@@ -119,9 +117,8 @@ public class TOPRegister {
             theOneProbeImp.registerProvider(new Condenser());
             theOneProbeImp.registerProvider(new Relay());
         }
-        if(Loader.isModLoaded("projecte")&ConfigHandler.peprobe){
+        if(Loader.isModLoaded("projecte")&ConfigHandler.peprobe)
             theOneProbeImp.registerProvider(new ProjectEProbeInfo());
-        }
         //PrimalTech
         if(Loader.isModLoaded("primal_tech")&ConfigHandler.primaltech){
             theOneProbeImp.registerProvider(new WaterSaw());
@@ -131,5 +128,8 @@ public class TOPRegister {
             theOneProbeImp.registerProvider(new StoneAnvil());
             theOneProbeImp.registerProvider(new StackBundle());
         }
+        //ExtendedCrafting
+        if(Loader.isModLoaded("extendedcrafting")&ConfigHandler.extendedcrafting)
+            theOneProbeImp.registerProvider(new ExtendedCraftingProbeInfo());
     }
 }
