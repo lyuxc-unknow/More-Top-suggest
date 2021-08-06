@@ -1,30 +1,30 @@
 package lyuxc.more;
 
-import lyuxc.more.plugin.astralsorcery.alter;
-import lyuxc.more.plugin.bloodmagic.BloodAlter;
-import lyuxc.more.plugin.bloodmagic.IncenseAltar;
-import lyuxc.more.plugin.botania.botaniaadditions.DreamingPool;
-import lyuxc.more.plugin.botania.botaniaadditions.ElvenAltar;
-import lyuxc.more.plugin.botania.botaniaadditions.GaiaPlate;
+import lyuxc.more.plugin.astralsorcery.AlterProbeInfo;
+import lyuxc.more.plugin.bloodmagic.BloodAlterProbeInfo;
+import lyuxc.more.plugin.bloodmagic.IncenseAltarProbeInfo;
+import lyuxc.more.plugin.botania.botaniaadditions.DreamingPoolProbeInfo;
+import lyuxc.more.plugin.botania.botaniaadditions.ElvenAltarProbeInfo;
+import lyuxc.more.plugin.botania.botaniaadditions.GaiaPlateProbeInfo;
 import lyuxc.more.plugin.botania.*;
-import lyuxc.more.plugin.chancecubes.chanceD20;
-import lyuxc.more.plugin.chancecubes.chancecubes;
+import lyuxc.more.plugin.chancecubes.ChanceD20ProbeInfo;
+import lyuxc.more.plugin.chancecubes.ChanceCubesProbeInfo;
 import lyuxc.more.plugin.embers.*;
-import lyuxc.more.plugin.embers.soot.AlchemyGlobe;
-import lyuxc.more.plugin.embers.soot.EmberBurst;
+import lyuxc.more.plugin.embers.soot.AlchemyGlobeProbeInfo;
+import lyuxc.more.plugin.embers.soot.EmberBurstProbeInfo;
 import lyuxc.more.plugin.extendedcrafting.ExtendedCraftingProbeInfo;
-import lyuxc.more.plugin.exu2.exu_enderlilly;
-import lyuxc.more.plugin.exu2.exu_mac;
+import lyuxc.more.plugin.exu2.EnderLillyProbeInfo;
+import lyuxc.more.plugin.exu2.MachineProbeInfo;
 import lyuxc.more.plugin.lordcraft.EnergyProbe;
-import lyuxc.more.plugin.lordcraft.void_altar;
-import lyuxc.more.plugin.omegacraft.dark_maker;
-import lyuxc.more.plugin.omegacraft.mag_mite;
+import lyuxc.more.plugin.lordcraft.VoidAlterProbeInfo;
+import lyuxc.more.plugin.omegacraft.DarkMakerProbeInfo;
+import lyuxc.more.plugin.omegacraft.MagProbeInfo;
 import lyuxc.more.plugin.primaltech.*;
 import lyuxc.more.plugin.projecte.*;
-import lyuxc.more.plugin.skyresources.AlchemyFusionTable;
-import lyuxc.more.plugin.skyresources.Freezer;
-import lyuxc.more.plugin.skyresources.LightFreezer;
-import lyuxc.more.plugin.torcherino.torcherino;
+import lyuxc.more.plugin.skyresources.AlchemyFusionTableProbeInfo;
+import lyuxc.more.plugin.skyresources.FreezerProbeInfo;
+import lyuxc.more.plugin.skyresources.LightFreezerProbeInfo;
+import lyuxc.more.plugin.torcherino.TorcherinoProbeInfo;
 import mcjty.theoneprobe.TheOneProbe;
 import mcjty.theoneprobe.apiimpl.TheOneProbeImp;
 import net.minecraftforge.fml.common.Loader;
@@ -34,102 +34,102 @@ public class TOPRegister {
         TheOneProbeImp theOneProbeImp = TheOneProbe.theOneProbeImp;
         //Torcherino
         if(Loader.isModLoaded("torcherino")& ConfigHandler.torcherino)
-            theOneProbeImp.registerProvider(new torcherino());
+            theOneProbeImp.registerProvider(new TorcherinoProbeInfo());
         //Extra utils
         if(Loader.isModLoaded("extrautils2")&ConfigHandler.exu2){
-            theOneProbeImp.registerProvider(new exu_enderlilly());
-            theOneProbeImp.registerProvider(new exu_mac());
+            theOneProbeImp.registerProvider(new EnderLillyProbeInfo());
+            theOneProbeImp.registerProvider(new MachineProbeInfo());
         }
         //Embers
         if(Loader.isModLoaded("embers")&ConfigHandler.embers){
-            theOneProbeImp.registerProvider(new ember_power());
-            theOneProbeImp.registerProvider(new ember_auto_hummer());
-            theOneProbeImp.registerProvider(new ember_beam_cannon());
-            theOneProbeImp.registerProvider(new ember_cinder_plinth());
-            theOneProbeImp.registerProvider(new ember_furnace());
-            theOneProbeImp.registerProvider(new ember_mixer());
-            theOneProbeImp.registerProvider(new ember_stamper());
-            theOneProbeImp.registerProvider(new ember_crystal_cell());
-            theOneProbeImp.registerProvider(new ember_emitter());
-            theOneProbeImp.registerProvider(new ember_receiver());
-            theOneProbeImp.registerProvider(new ember_activator());
-            theOneProbeImp.registerProvider(new ember_BeamSplitter());
-            theOneProbeImp.registerProvider(new ember_alchemy_pedestal());
-            theOneProbeImp.registerProvider(new ember_emberinjector());
-            theOneProbeImp.registerProvider(new ember_reactor());
-            theOneProbeImp.registerProvider(new ember_pulser());
-            theOneProbeImp.registerProvider(new ember_funnel());
-            theOneProbeImp.registerProvider(new ember_charber());
-            theOneProbeImp.registerProvider(new ember_mechanical_pump());
-            theOneProbeImp.registerProvider(new ember_boiler());
+            theOneProbeImp.registerProvider(new PowerProbeInfo());
+            theOneProbeImp.registerProvider(new AutoHummerProbeInfo());
+            theOneProbeImp.registerProvider(new BeamCannonProbeInfo());
+            theOneProbeImp.registerProvider(new CinderPlinthProbeInfo());
+            theOneProbeImp.registerProvider(new FurnaceProbeInfo());
+            theOneProbeImp.registerProvider(new MixerProbeInfo());
+            theOneProbeImp.registerProvider(new StamperProbeInfo());
+            theOneProbeImp.registerProvider(new CrystalCellProbeInfo());
+            theOneProbeImp.registerProvider(new EmitterProbeInfo());
+            theOneProbeImp.registerProvider(new ReceiverProbeInfo());
+            theOneProbeImp.registerProvider(new ActivatorProbeInfo());
+            theOneProbeImp.registerProvider(new BeamSplitterProbeInfo());
+            theOneProbeImp.registerProvider(new AlchemyPedestalProbeInfo());
+            theOneProbeImp.registerProvider(new EmberInjectorProbeInfo());
+            theOneProbeImp.registerProvider(new ReactorProbeInfo());
+            theOneProbeImp.registerProvider(new PulserProbeInfo());
+            theOneProbeImp.registerProvider(new FunnelProbeInfo());
+            theOneProbeImp.registerProvider(new CharberProbeInfo());
+            theOneProbeImp.registerProvider(new MechanicalPumpProbeInfo());
+            theOneProbeImp.registerProvider(new BoilerProbeInfo());
         }
         //Botania
         if(Loader.isModLoaded("botania")&ConfigHandler.botania){
-            theOneProbeImp.registerProvider(new pool());
-            theOneProbeImp.registerProvider(new runealtar());
-            theOneProbeImp.registerProvider(new spreader());
-            theOneProbeImp.registerProvider(new brewery());
-            theOneProbeImp.registerProvider(new terraplate());
+            theOneProbeImp.registerProvider(new ManaPoolProbeInfo());
+            theOneProbeImp.registerProvider(new RuneAlterProbeInfo());
+            theOneProbeImp.registerProvider(new SpreaderProbeInfo());
+            theOneProbeImp.registerProvider(new BreweryProbeInfo());
+            theOneProbeImp.registerProvider(new TerraPlateProbeInfo());
         }
         //Botania Addition
         if(Loader.isModLoaded("botanicadds")&ConfigHandler.botania){
-            theOneProbeImp.registerProvider(new DreamingPool());
-            theOneProbeImp.registerProvider(new ElvenAltar());
-            theOneProbeImp.registerProvider(new GaiaPlate());
+            theOneProbeImp.registerProvider(new DreamingPoolProbeInfo());
+            theOneProbeImp.registerProvider(new ElvenAltarProbeInfo());
+            theOneProbeImp.registerProvider(new GaiaPlateProbeInfo());
         }
         //Lord Craft
         if(Loader.isModLoaded("lordcraft")&ConfigHandler.lordcraft) {
-            theOneProbeImp.registerProvider(new void_altar());
+            theOneProbeImp.registerProvider(new VoidAlterProbeInfo());
             theOneProbeImp.registerProvider(new EnergyProbe());
         }
         //Omega Craft
         if(Loader.isModLoaded("omegacraft")&ConfigHandler.omegacraft){
-            theOneProbeImp.registerProvider(new dark_maker());
-            theOneProbeImp.registerProvider(new mag_mite());
+            theOneProbeImp.registerProvider(new DarkMakerProbeInfo());
+            theOneProbeImp.registerProvider(new MagProbeInfo());
         }
         //Soot
         if(Loader.isModLoaded("soot")&ConfigHandler.embers){
-            theOneProbeImp.registerProvider(new EmberBurst());
-            theOneProbeImp.registerProvider(new AlchemyGlobe());
+            theOneProbeImp.registerProvider(new EmberBurstProbeInfo());
+            theOneProbeImp.registerProvider(new AlchemyGlobeProbeInfo());
         }
         //Chance Cubes
         if(Loader.isModLoaded("chancecubes")&ConfigHandler.chancecubes){
-            theOneProbeImp.registerProvider(new chancecubes());
-            theOneProbeImp.registerProvider(new chanceD20());
+            theOneProbeImp.registerProvider(new ChanceCubesProbeInfo());
+            theOneProbeImp.registerProvider(new ChanceD20ProbeInfo());
         }
         //Astral Sorcery
         if(Loader.isModLoaded("astralsorcery")&ConfigHandler.astralsorcery)
-            theOneProbeImp.registerProvider(new alter());
+            theOneProbeImp.registerProvider(new AlterProbeInfo());
         //Blood Magic
         if(Loader.isModLoaded("bloodmagic")&ConfigHandler.bloodmagic){
-            theOneProbeImp.registerProvider(new BloodAlter());
+            theOneProbeImp.registerProvider(new BloodAlterProbeInfo());
             if(ConfigHandler.bloodmagicmore){
-                theOneProbeImp.registerProvider(new IncenseAltar());
+                theOneProbeImp.registerProvider(new IncenseAltarProbeInfo());
             }
         }
         //Sky Resources
         if(Loader.isModLoaded("skyresources")&ConfigHandler.skyresources){
-            theOneProbeImp.registerProvider(new Freezer());
-            theOneProbeImp.registerProvider(new LightFreezer());
-            theOneProbeImp.registerProvider(new AlchemyFusionTable());
+            theOneProbeImp.registerProvider(new FreezerProbeInfo());
+            theOneProbeImp.registerProvider(new LightFreezerProbeInfo());
+            theOneProbeImp.registerProvider(new AlchemyFusionTableProbeInfo());
         }
         //ProjectE
         if(Loader.isModLoaded("projecte")&ConfigHandler.projecre){
-            theOneProbeImp.registerProvider(new DMPedestal());
-            theOneProbeImp.registerProvider(new CollectorMK1());
-            theOneProbeImp.registerProvider(new Condenser());
-            theOneProbeImp.registerProvider(new Relay());
+            theOneProbeImp.registerProvider(new DarkMatterPedestalProbeInfo());
+            theOneProbeImp.registerProvider(new CollectorProbeInfo());
+            theOneProbeImp.registerProvider(new CondenserProbeInfo());
+            theOneProbeImp.registerProvider(new RelayProbeInfo());
         }
         if(Loader.isModLoaded("projecte")&ConfigHandler.peprobe)
             theOneProbeImp.registerProvider(new ProjectEProbeInfo());
         //PrimalTech
         if(Loader.isModLoaded("primal_tech")&ConfigHandler.primaltech){
-            theOneProbeImp.registerProvider(new WaterSaw());
-            theOneProbeImp.registerProvider(new StoneGrill());
-            theOneProbeImp.registerProvider(new Kiln());
-            theOneProbeImp.registerProvider(new WorkStump());
-            theOneProbeImp.registerProvider(new StoneAnvil());
-            theOneProbeImp.registerProvider(new StackBundle());
+            theOneProbeImp.registerProvider(new WaterSawProbeInfo());
+            theOneProbeImp.registerProvider(new StoneGrillProbeInfo());
+            theOneProbeImp.registerProvider(new KilnProbeInfo());
+            theOneProbeImp.registerProvider(new WorkStumpProbeInfo());
+            theOneProbeImp.registerProvider(new StoneAnvilProbeInfo());
+            theOneProbeImp.registerProvider(new StackBundleProbeInfo());
         }
         //ExtendedCrafting
         if(Loader.isModLoaded("extendedcrafting")&ConfigHandler.extendedcrafting)
