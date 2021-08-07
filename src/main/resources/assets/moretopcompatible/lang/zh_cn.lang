@@ -1,3 +1,10 @@
+client.msg.norecipe=没有找到配方。
+client.msg.nousage=没有找到用途。
+
+key.categories.mtc=[MTC]更多TOP支持
+key.jei.recipe=显示合成
+key.jei.using=显示用途
+
 random.AstralSorcery.Alter=星光
 random.BloodMagic.Alter.Tier=等级
 random.BloodMagic.IncenseAlter.IncenseAddition=增益

@@ -1,3 +1,10 @@
+client.msg.norecipe=No recipe found.
+client.msg.nousage=No usage found.
+
+key.categories.mtc=[MTC]MoreTopCompatible
+key.jei.recipe=Show recipe
+key.jei.using=Show usage
+
 random.AstralSorcery.Alter=Starlight
 random.BloodMagic.Alter.Tier=Tier
 random.BloodMagic.IncenseAlter.IncenseAddition=Bonus
