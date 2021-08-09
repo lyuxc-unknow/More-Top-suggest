@@ -1,14 +1,10 @@
 package lyuxc.more;
 
 import lyuxc.more.keys.Keys;
-import net.minecraft.client.settings.KeyBinding;
-import net.minecraftforge.client.settings.KeyConflictContext;
 import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import org.lwjgl.input.Keyboard;
 
 import java.io.File;
 
@@ -32,9 +28,6 @@ public class MoreTopCompatible {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
         TOPRegister.registerTips();
-        Keys.jei_using = new KeyBinding("key.jei.using", KeyConflictContext.IN_GAME, Keyboard.KEY_NUMPAD1,"key.categories.mtc");
-        Keys.jei_recipe = new KeyBinding("key.jei.recipe",KeyConflictContext.IN_GAME,Keyboard.KEY_NUMPAD2,"key.categories.mtc");
-        ClientRegistry.registerKeyBinding(Keys.jei_using);
-        ClientRegistry.registerKeyBinding(Keys.jei_recipe);
+        Keys.init();
     }
 }
