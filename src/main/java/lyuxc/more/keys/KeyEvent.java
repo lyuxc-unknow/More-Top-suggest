@@ -14,10 +14,10 @@ import net.minecraftforge.fml.common.gameevent.InputEvent;
 
 @Mod.EventBusSubscriber
 public class KeyEvent {
-    private static final Minecraft mc = Minecraft.getMinecraft();
     @SubscribeEvent
     public static void KE(InputEvent.KeyInputEvent event){
         if(Loader.isModLoaded("jei")){
+            Minecraft mc = Minecraft.getMinecraft();
             EntityPlayer player = mc.player;
             World world = mc.world;
             BlockPos pos = mc.objectMouseOver.getBlockPos();
