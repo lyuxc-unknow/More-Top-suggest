@@ -21,13 +21,15 @@ public class KeyEvent {
             EntityPlayer player = mc.player;
             World world = mc.world;
             BlockPos pos = mc.objectMouseOver.getBlockPos();
-            IBlockState block = player.world.getBlockState(pos);
-            ItemStack itemStack = block.getBlock().getItem(world,pos,block);
-            if(Keys.jei_using.isPressed()){
+            if(Keys.jei_using.isKeyDown()){
+                IBlockState block = world.getBlockState(pos);
+                ItemStack itemStack = block.getBlock().getItem(world,pos,block);
                 if (!itemStack.isEmpty())
                     JEIHandler.displayUses(itemStack);
             }
-            if(Keys.jei_recipe.isPressed()){
+            if(Keys.jei_recipe.isKeyDown()){
+                IBlockState block = world.getBlockState(pos);
+                ItemStack itemStack = block.getBlock().getItem(world,pos,block);
                 if(!itemStack.isEmpty()){
                     JEIHandler.displayRecipes(itemStack);
                 }

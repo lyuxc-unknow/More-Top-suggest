@@ -1,5 +1,6 @@
 package lyuxc.more;
 
+import lyuxc.more.config.ConfigHandler;
 import lyuxc.more.plugin.astralsorcery.AlterProbeInfo;
 import lyuxc.more.plugin.bloodmagic.BloodAlterProbeInfo;
 import lyuxc.more.plugin.bloodmagic.IncenseAltarProbeInfo;
@@ -33,15 +34,15 @@ public class TOPRegister {
     public static void registerTips() {
         TheOneProbeImp theOneProbeImp = TheOneProbe.theOneProbeImp;
         //Torcherino
-        if(Loader.isModLoaded("torcherino")& ConfigHandler.torcherino)
+        if(Loader.isModLoaded("torcherino")& ConfigHandler.moreTopCompatibleConfig.torcherino)
             theOneProbeImp.registerProvider(new TorcherinoProbeInfo());
         //Extra utils
-        if(Loader.isModLoaded("extrautils2")&ConfigHandler.exu2){
+        if(Loader.isModLoaded("extrautils2")&ConfigHandler.moreTopCompatibleConfig.exu2){
             theOneProbeImp.registerProvider(new EnderLillyProbeInfo());
             theOneProbeImp.registerProvider(new MachineProbeInfo());
         }
         //Embers
-        if(Loader.isModLoaded("embers")&ConfigHandler.embers){
+        if(Loader.isModLoaded("embers")&ConfigHandler.moreTopCompatibleConfig.embers){
             theOneProbeImp.registerProvider(new PowerProbeInfo());
             theOneProbeImp.registerProvider(new AutoHummerProbeInfo());
             theOneProbeImp.registerProvider(new BeamCannonProbeInfo());
@@ -64,7 +65,7 @@ public class TOPRegister {
             theOneProbeImp.registerProvider(new BoilerProbeInfo());
         }
         //Botania
-        if(Loader.isModLoaded("botania")&ConfigHandler.botania){
+        if(Loader.isModLoaded("botania")&ConfigHandler.moreTopCompatibleConfig.botania){
             theOneProbeImp.registerProvider(new ManaPoolProbeInfo());
             theOneProbeImp.registerProvider(new RuneAlterProbeInfo());
             theOneProbeImp.registerProvider(new SpreaderProbeInfo());
@@ -72,58 +73,58 @@ public class TOPRegister {
             theOneProbeImp.registerProvider(new TerraPlateProbeInfo());
         }
         //Botania Addition
-        if(Loader.isModLoaded("botanicadds")&ConfigHandler.botania){
+        if(Loader.isModLoaded("botanicadds")&ConfigHandler.moreTopCompatibleConfig.botania){
             theOneProbeImp.registerProvider(new DreamingPoolProbeInfo());
             theOneProbeImp.registerProvider(new ElvenAltarProbeInfo());
             theOneProbeImp.registerProvider(new GaiaPlateProbeInfo());
         }
         //Lord Craft
-        if(Loader.isModLoaded("lordcraft")&ConfigHandler.lordcraft) {
+        if(Loader.isModLoaded("lordcraft")&ConfigHandler.moreTopCompatibleConfig.lordcraft) {
             theOneProbeImp.registerProvider(new VoidAlterProbeInfo());
             theOneProbeImp.registerProvider(new EnergyProbe());
         }
         //Omega Craft
-        if(Loader.isModLoaded("omegacraft")&ConfigHandler.omegacraft){
+        if(Loader.isModLoaded("omegacraft")&ConfigHandler.moreTopCompatibleConfig.omegacraft){
             theOneProbeImp.registerProvider(new DarkMakerProbeInfo());
             theOneProbeImp.registerProvider(new MagProbeInfo());
         }
         //Soot
-        if(Loader.isModLoaded("soot")&ConfigHandler.embers){
+        if(Loader.isModLoaded("soot")&ConfigHandler.moreTopCompatibleConfig.embers){
             theOneProbeImp.registerProvider(new EmberBurstProbeInfo());
             theOneProbeImp.registerProvider(new AlchemyGlobeProbeInfo());
         }
         //Chance Cubes
-        if(Loader.isModLoaded("chancecubes")&ConfigHandler.chancecubes){
+        if(Loader.isModLoaded("chancecubes")&ConfigHandler.moreTopCompatibleConfig.chancecubes){
             theOneProbeImp.registerProvider(new ChanceCubesProbeInfo());
             theOneProbeImp.registerProvider(new ChanceD20ProbeInfo());
         }
         //Astral Sorcery
-        if(Loader.isModLoaded("astralsorcery")&ConfigHandler.astralsorcery)
+        if(Loader.isModLoaded("astralsorcery")&ConfigHandler.moreTopCompatibleConfig.astralsorcery)
             theOneProbeImp.registerProvider(new AlterProbeInfo());
         //Blood Magic
-        if(Loader.isModLoaded("bloodmagic")&ConfigHandler.bloodmagic){
+        if(Loader.isModLoaded("bloodmagic")&ConfigHandler.moreTopCompatibleConfig.bloodmagic){
             theOneProbeImp.registerProvider(new BloodAlterProbeInfo());
-            if(ConfigHandler.bloodmagicmore){
+            if(ConfigHandler.moreTopCompatibleConfig.bloodmagicmore){
                 theOneProbeImp.registerProvider(new IncenseAltarProbeInfo());
             }
         }
         //Sky Resources
-        if(Loader.isModLoaded("skyresources")&ConfigHandler.skyresources){
+        if(Loader.isModLoaded("skyresources")&ConfigHandler.moreTopCompatibleConfig.skyresources){
             theOneProbeImp.registerProvider(new FreezerProbeInfo());
             theOneProbeImp.registerProvider(new LightFreezerProbeInfo());
             theOneProbeImp.registerProvider(new AlchemyFusionTableProbeInfo());
         }
         //ProjectE
-        if(Loader.isModLoaded("projecte")&ConfigHandler.projecre){
+        if(Loader.isModLoaded("projecte")&ConfigHandler.moreTopCompatibleConfig.projecre){
             theOneProbeImp.registerProvider(new DarkMatterPedestalProbeInfo());
             theOneProbeImp.registerProvider(new CollectorProbeInfo());
             theOneProbeImp.registerProvider(new CondenserProbeInfo());
             theOneProbeImp.registerProvider(new RelayProbeInfo());
         }
-        if(Loader.isModLoaded("projecte")&ConfigHandler.peprobe)
+        if(Loader.isModLoaded("projecte")&ConfigHandler.moreTopCompatibleConfig.peprobe)
             theOneProbeImp.registerProvider(new ProjectEProbeInfo());
         //PrimalTech
-        if(Loader.isModLoaded("primal_tech")&ConfigHandler.primaltech){
+        if(Loader.isModLoaded("primal_tech")&ConfigHandler.moreTopCompatibleConfig.primaltech){
             theOneProbeImp.registerProvider(new WaterSawProbeInfo());
             theOneProbeImp.registerProvider(new StoneGrillProbeInfo());
             theOneProbeImp.registerProvider(new KilnProbeInfo());
@@ -132,7 +133,7 @@ public class TOPRegister {
             theOneProbeImp.registerProvider(new StackBundleProbeInfo());
         }
         //ExtendedCrafting
-        if(Loader.isModLoaded("extendedcrafting")&ConfigHandler.extendedcrafting)
+        if(Loader.isModLoaded("extendedcrafting")&ConfigHandler.moreTopCompatibleConfig.extendedcrafting)
             theOneProbeImp.registerProvider(new ExtendedCraftingProbeInfo());
     }
 }
