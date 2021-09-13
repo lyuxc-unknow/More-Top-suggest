@@ -1,7 +1,7 @@
 package lyuxc.more.plugin.jei;
 
-import mezz.jei.api.BlankModPlugin;
 import mezz.jei.api.IJeiRuntime;
+import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JEIPlugin;
 import mezz.jei.api.recipe.IFocus;
 import net.minecraft.client.Minecraft;
@@ -13,7 +13,7 @@ import net.minecraft.util.text.TextFormatting;
 import javax.annotation.Nonnull;
 
 @JEIPlugin
-public class JEIHandler extends BlankModPlugin {
+public class JEIHandler implements IModPlugin {
 
     private static IJeiRuntime runtime;
 

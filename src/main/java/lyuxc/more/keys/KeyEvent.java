@@ -1,6 +1,8 @@
 package lyuxc.more.keys;
 
+import lyuxc.more.config.ConfigHandler;
 import lyuxc.more.plugin.jei.JEIHandler;
+import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
@@ -21,15 +23,17 @@ public class KeyEvent {
             EntityPlayer player = mc.player;
             World world = mc.world;
             BlockPos pos = mc.objectMouseOver.getBlockPos();
-            if(Keys.jei_using.isKeyDown()){
+            if(Keys.jei_using.isKeyDown() && ConfigHandler.moreTopCompatibleConfig.keyevent){
                 IBlockState block = world.getBlockState(pos);
-                ItemStack itemStack = block.getBlock().getItem(world,pos,block);
+                Block block1 = block.getBlock();
+                ItemStack itemStack = block1.getItem(world,pos,block);
                 if (!itemStack.isEmpty())
                     JEIHandler.displayUses(itemStack);
             }
-            if(Keys.jei_recipe.isKeyDown()){
+            if(Keys.jei_recipe.isKeyDown() && ConfigHandler.moreTopCompatibleConfig.keyevent){
                 IBlockState block = world.getBlockState(pos);
-                ItemStack itemStack = block.getBlock().getItem(world,pos,block);
+                Block block1 = block.getBlock();
+                ItemStack itemStack = block1.getItem(world,pos,block);
                 if(!itemStack.isEmpty()){
                     JEIHandler.displayRecipes(itemStack);
                 }

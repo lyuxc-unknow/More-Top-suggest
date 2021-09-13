@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 @Mod(
         modid = MoreTopCompatible.MOD_ID,
         name = MoreTopCompatible.MOD_NAME,
-        version = "0.0.11",
+        version = "0.0.12",
         guiFactory = MoreTopCompatible.GuiFactory,
         dependencies = "required-after:theoneprobe"
 )

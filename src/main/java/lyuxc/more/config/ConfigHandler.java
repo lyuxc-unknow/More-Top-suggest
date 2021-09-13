@@ -52,5 +52,8 @@ public class ConfigHandler {
         @Config.RequiresMcRestart
         @Config.Comment("If true,This will enable ExtendedCrafting support [default : true]")
         public boolean extendedcrafting = true;
+        @Config.RequiresMcRestart
+        @Config.Comment("If true,This will enable KeyEvent(has much BUG!)[default : false]")
+        public boolean keyevent = false;
     }
 }
