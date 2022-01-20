@@ -1,6 +1,6 @@
 package lyuxc.more;
 
-import lyuxc.more.keys.Keys;
+//import lyuxc.more.keys.Keys;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
@@ -19,6 +19,6 @@ public class MoreTopCompatible {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
         TOPRegister.registerTips();
-        Keys.init();
+        //Keys.init();
     }
 }
