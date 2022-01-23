@@ -66,7 +66,9 @@ dependencies {
     runtime "curse.maven:hammercore-247401:3157564"
     runtime "curse.maven:patchouli-306770:3162874"
     runtime "curse.maven:baubles-227083:2518667"
+    runtime "curse.maven:guideAPI-228832:2645992"
 }
+
 runClient {
     args '--username', 'lyuxc_unknow'
     jvmArgs '-Xms8G', '-Xmx8G'
@@ -83,3 +85,8 @@ processResources {
         exclude 'mcmod.info'
     }
 }
+/*
+mixin {
+    add sourceSets.main, "mixins.randomtweaker.refmap.json"
+}
+*/

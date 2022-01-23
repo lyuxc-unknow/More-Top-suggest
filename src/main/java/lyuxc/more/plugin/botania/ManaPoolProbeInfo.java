@@ -4,6 +4,7 @@ import mcjty.theoneprobe.api.*;
 import mcjty.theoneprobe.apiimpl.styles.ProgressStyle;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.translation.I18n;
 import net.minecraft.world.World;
 import vazkii.botania.common.block.tile.mana.TilePool;
@@ -20,7 +21,9 @@ public class ManaPoolProbeInfo implements IProbeInfoProvider {
             int green = Color.green.getRGB();
             int white = Color.white.getRGB();
             if (tile.getCurrentMana() > 0) {
-                probeInfo.progress(tile.getCurrentMana(), tile.manaCap, new ProgressStyle().prefix(I18n.translateToLocal("random.Botania.Mana") + ":" + tile.getCurrentMana()).suffix("/" + tile.manaCap)
+                probeInfo.progress(tile.getCurrentMana(), tile.manaCap, new ProgressStyle()
+                        .prefix(I18n.translateToLocal("random.Botania.Mana"))
+                        .suffix("/" + tile.manaCap)
                         .width(110)
                         .numberFormat(NumberFormat.NONE)
                         .borderColor(green)
