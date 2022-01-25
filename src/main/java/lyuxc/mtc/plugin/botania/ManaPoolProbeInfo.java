@@ -14,13 +14,13 @@ import vazkii.botania.common.block.tile.mana.TilePool;
 
 import java.awt.*;
 
-public class manaPool implements IProbeInfoProvider {
-    public void  addProbeInfo(ProbeMode probeMode, IProbeInfo probeInfo, PlayerEntity player, World world, BlockState blockState, IProbeHitData probeHitData){
+public class ManaPoolProbeInfo implements IProbeInfoProvider {
+    public void addProbeInfo(ProbeMode probeMode, IProbeInfo probeInfo, PlayerEntity player, World world, BlockState blockState, IProbeHitData probeHitData){
         if(world.getBlockEntity(probeHitData.getPos()) instanceof TilePool) {
             TilePool tile = (TilePool) world.getBlockEntity(probeHitData.getPos());
-
             assert tile != null;
-            probeInfo.progress(tile.getCurrentMana(), tile.manaCap,new ProgressStyle()
+            if(tile.getCurrentMana()>0)
+                probeInfo.progress(tile.getCurrentMana(), tile.manaCap,new ProgressStyle()
                             .prefix(new TranslationTextComponent("mtc.mana.name"))
                             .suffix("/"+tile.manaCap)
                             .color(Color.green.getRGB(),Color.cyan.getRGB(),Color.white.getRGB()));
