@@ -12,7 +12,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import java.util.Collections;
 import java.util.Set;
 
-@SideOnly(Side.SERVER)
+@SideOnly(Side.CLIENT)
 @SuppressWarnings("unused")
 public class ConfigGuiFactory implements IModGuiFactory {
     @Override
