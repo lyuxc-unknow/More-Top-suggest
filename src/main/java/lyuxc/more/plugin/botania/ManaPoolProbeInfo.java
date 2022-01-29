@@ -22,7 +22,7 @@ public class ManaPoolProbeInfo implements IProbeInfoProvider {
             int white = Color.white.getRGB();
             if (tile.getCurrentMana() > 0) {
                 probeInfo.progress(tile.getCurrentMana(), tile.manaCap, new ProgressStyle()
-                        .prefix(I18n.translateToLocal("random.Botania.Mana"))
+                        .prefix(I18n.translateToLocal("random.Botania.Mana")+ ":" + tile.getCurrentMana())
                         .suffix("/" + tile.manaCap)
                         .width(110)
                         .numberFormat(NumberFormat.NONE)

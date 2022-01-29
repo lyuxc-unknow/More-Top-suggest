@@ -9,7 +9,7 @@ buildscript {
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 
-version = "0.0.12"
+version = "1.12.2-013"
 group = "lyuxc.more"
 archivesBaseName = "MoreTopCompatible"
 
